@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Sel1 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer angulo: ");
+        double a = entrada.nextDouble();
+
+        System.out.print("Ingrese el segundo angulo: ");
+        double b = entrada.nextDouble();
+
+        System.out.print("Ingrese el tercer angulo: ");
+        double c = entrada.nextDouble();
+
+        if (a > 0 && b > 0 && c > 0 && a + b + c == 180) {
+            if (a < 90 && b < 90 && c < 90) {
+                System.out.println("Triangulo acutangulo");
+            } else if (a == 90 || b == 90 || c == 90) {
+                System.out.println("Triangulo rectangulo");
+            } else {
+                System.out.println("Triangulo obtusangulo");
+            }
+        } else {
+            System.out.println("Los angulos no forman un triangulo valido");
+        }
+
+        entrada.close();
+    }
+}
